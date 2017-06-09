@@ -1,0 +1,62 @@
+<HTML>
+	<HEAD>
+		<TITLE> THE GAME, IS ON!! </TITLE>
+		<link rel = 'stylesheet' href = 'css/pageset.css' type = 'text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src = 'js/myfuncs.js'></script>
+	</HEAD>
+	<BODY onload = 'setup_game()'>
+		
+		<div class = 'header'>
+			<div class = 'centerfix'>
+			
+				<h1> PLAY THE GAME.... WIN BY MATCHING </h1>
+				
+			</div>
+		</div>
+	
+		<div class = 'content'>
+			<div class = 'centerfix'>
+				<div class = 'scoreboard'>
+					<div class = 'clear'>
+						<span id = 'clear'>CLEAR: 0</span>
+					</div>
+					<div class = 'turns'>
+						<span id = 'turns'>TURNS: 0</span>	
+					</div>
+				</div>
+				<div class = 'TheBox'>
+					<TABLE id = 'game'>
+					
+						<TR >
+							<TD id = '00' onclick = 'show(this)'></TD>
+							<TD id = '01' onclick = 'show(this)'></TD>
+							<TD id = '02' onclick = 'show(this)'></TD>
+							<TD id = '03' onclick = 'show(this)'></TD>
+						</TR>
+						<TR >
+							<TD id = '10' onclick = 'show(this)'></TD>
+							<TD id = '11' onclick = 'show(this)'></TD>
+							<TD id = '12' onclick = 'show(this)'></TD>
+							<TD id = '13' onclick = 'show(this)'></TD>
+						</TR>
+						<TR >
+							<TD id = '20' onclick = 'show(this)'></TD>
+							<TD id = '21' onclick = 'show(this)'></TD>
+							<TD id = '22' onclick = 'show(this)'></TD>
+							<TD id = '23' onclick = 'show(this)'></TD>
+						</TR>				
+						<TR >
+							<TD id = '30' onclick = 'show(this)'></TD>
+							<TD id = '31' onclick = 'show(this)'></TD>
+							<TD id = '32' onclick = 'show(this)'></TD>
+							<TD id = '33' onclick = 'show(this)'></TD>
+						</TR>
+					
+					<TABLE>
+				</div>
+			</div>
+		</div>
+	</BODY>
+
+</HTML>

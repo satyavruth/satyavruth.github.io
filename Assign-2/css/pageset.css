@@ -1,0 +1,279 @@
+html,body {
+	margin:0;
+	padding:0;
+	display:block;
+	left:0;
+	right:0;
+	min-width:max-content;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.bluebar 
+{
+	background-color: rgb(59,89,152);
+	width:auto;
+	margin:0;
+	padding:0;
+	max-height:80px;
+}
+
+.bluebar:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.middle
+{
+	margin:0;
+	padding:0;
+	padding-bottom: 2px;
+	background: linear-gradient(white, #D3D8E8);
+	width:auto;
+}
+
+.middle:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+	
+}
+
+
+.foot
+{
+	margin:0 auto;
+	padding:0;
+	color: rgba(0,0,0,0.4);
+}
+
+
+.content
+{
+	position:relative;
+	width: 980px;
+	margin:0 auto;
+	zoom:1;
+	height:100px;
+}
+
+
+/*==================BLUEBAR ELEMENTS===================*/
+
+
+.bluebar img 
+{
+	height: 55px;
+	padding:0;
+	margin-top:12px;
+	margin-left:-10px;
+}
+
+
+.bluebar span
+{
+	margin-top:0.7em;
+	position:absolute;
+	z-index:20;
+	right:0;
+	color:white;
+	font-size:0.8em;
+}
+
+.bluebar input
+{
+	border:0.07em solid black;
+	height:auto;
+	padding:2px;
+	
+}
+
+.bluebar input[type = "text"],.bluebar input[type = "password"]
+{
+	width:150px;
+}
+
+.bluebar table
+{
+	border-color: black;
+}
+
+.bluebar span table td
+{
+	padding-left:1.05em;
+	padding-top:0.21em;
+}
+
+.r3_color {
+	
+	color: #9cb4d8;
+	cursor:pointer;
+}
+
+.login {
+	
+	background-color: rgba(66, 96, 164, 1); 
+	border:0.07em solid black;
+	margin:0;
+	color:white;
+
+	
+}
+
+.login:hover
+{
+	cursor:pointer;
+	background-color: rgb(58,85,148);
+}
+
+
+/*===============================middle ELEMENTS======================================*/
+
+
+.left
+{
+	position: relative;
+	width:50%;
+	margin:0;
+	padding:0;
+	color: #0e385f;
+	float:left;
+	
+}
+
+.left h4
+{
+	color: #0e385f;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    margin-top: 40px;
+    width: 450px;
+    word-spacing: -1px;
+	margin-bottom:0;
+}
+
+
+.right 
+{
+	position:relative;
+	color:black;
+	float:right;
+	width:42%;
+	letter-spacing:wide;
+	
+}
+
+h3,h1 
+{
+	margin-top:0.5em;
+	margin-bottom:0;
+	font-weight:normal;
+}
+
+.right h1
+{
+	font-size: 36px;
+}
+
+.right table
+{
+	margin-top:1em;
+}
+
+
+
+.data
+{
+	width:100%;
+	height: 1.5em;
+	border: 0.07em solid grey;
+	color: rgba(0,0,0,0.4);
+	border-color: #bdc7d8;
+    border-radius: 5px;
+	font-size: 18px;
+    padding: 8px 10px;
+	display:inline-block;
+}
+
+.data:hover
+{
+	color:black;
+		
+}
+
+.right td
+{
+	padding-right:1.6em;
+	padding-top:0.3em;
+	max-width:20em;
+}
+
+.right p
+{
+	
+	font-size: 0.85em;
+	max-width:80%;
+	color: rgba(0,0,0,0.4);
+	text-decoration:none;
+	
+}
+
+.none,.none a 
+{
+	text-decoration: none;
+}
+
+.create
+{
+	background: linear-gradient(#79bc64, #578843);
+	color:white;
+	padding:0.6em;
+	padding-right:2em;
+	padding-left:2em;
+	border-radius:0.56em 0.56em 0.56em 0.56em;
+	box-shadow:0px;
+	max-height:10em;
+	font-size:19px;
+}
+
+.create:hover
+{
+	cursor:pointer;
+}
+
+
+/*=================foot ELEMENTS===================*/
+
+
+.foot hr
+{
+	border-color: rgba(0,0,0,0.1);
+}
+
+.icon 
+{
+	max-height: 1.4em;
+	max-width:2.8em;
+}
+
+.horizon,.horizon li
+{
+	margin-left:0;
+	padding-left:1em;
+	position:relative;
+	display:inline-flex;
+	
+}
+
+.horizon {
+	margin-left:-2em;
+}
