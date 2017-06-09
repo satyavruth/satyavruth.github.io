@@ -69,6 +69,8 @@ function show(ele)
 				
 				document.getElementById('clear').innerHTML = 'CLEAR: ' + clear;
 				document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
+				document.getElementById(ele.id).className = 'done';
+				document.getElementById(cur[1]).className = 'done';
 				cur = null;
 			}
 		
@@ -85,7 +87,8 @@ function show(ele)
 		
 		document.getElementById('clear').innerHTML = 'CLEAR: ALL';
 		document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
-		var score = Math.roof((clear/turns)*100);
+		var score = Math.floor((clear/turns)*100);
+		document.getElementById('score').innerHTML = score;
 		alert('CONGRATULATIONS... Your score is: ' + score);
 	}
 }

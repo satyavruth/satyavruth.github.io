@@ -48,16 +48,30 @@ html,body {
 
 .scoreboard {
 	
-	display:block;
+	display:flex;
 	font-size: 2em;
 }
 
 .clear {
+	
+	width:33%;
+	margin:0;
+	padding:0;
 	float:left;
 }
 
 .turns {
+	
+	width:33%;
+	margin:0;
+	padding:0;
 	float:right;
+}
+
+.score {
+	width:33%;
+	margin:0;
+	padding:0;
 }
 
 
@@ -88,9 +102,17 @@ html,body {
 	
 	width:25%;
 	font-size:5em;
+	border: 2px solid skyblue;
 }
 
 .Thebox TD:hover {
+	
+}
+
+@-webkit-keyframes turn {
+	
+	from { -webkit-transform:rotateY(-45deg);}
+	to {-webkit-transform: rotateY(45deg);}
 	
 }
 
@@ -98,10 +120,19 @@ html,body {
 	
 	color: rgba(0,0,0,0);
 	background-color: grey;
+	animation: turn 2s;
 
 }
 
 .changed_view {
 	
 	color: rgba(0,0,0,1);
+	background-color:skyblue;
+	animation:turn 4s infinite;
+}
+
+.done {
+	
+	color:skyblue;
+	
 }
