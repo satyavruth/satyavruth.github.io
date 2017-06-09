@@ -83,7 +83,7 @@ function show(ele)
 	if(clear == 8)
 	{
 		
-		document.getElementById('clear').innerHTML = 'CLEAR: ALL' + ;
+		document.getElementById('clear').innerHTML = 'CLEAR: ALL';
 		document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
 		var score = Math.roof((clear/turns)*100);
 		alert('CONGRATULATIONS... Your score is: ' + score);
