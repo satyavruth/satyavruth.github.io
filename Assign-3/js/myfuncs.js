@@ -71,6 +71,9 @@ function show(ele)
 				document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
 				document.getElementById(ele.id).className = 'done';
 				document.getElementById(cur[1]).className = 'done';
+				document.getElementById(ele.id).onclick = '';
+				document.getElementById(cur[1]).onclick = '';
+				
 				cur = null;
 			}
 		
