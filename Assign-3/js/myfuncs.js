@@ -74,6 +74,7 @@ function show(ele)
 		
 			else
 			{
+				alert(data[position.indexOf(ele.id)]);
 				setTimeout(hide(cur[1],ele.id),5000);
 			}	
 		}		
