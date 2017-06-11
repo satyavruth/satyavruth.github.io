@@ -118,17 +118,14 @@ html,body {
 
 .default_view {
 	
-	color: rgba(0,0,0,0);
-	background-color: grey;
-	animation: turn 2s;
-
+	animation: turn 1s;
 }
 
 .changed_view {
 	
 	color: rgba(0,0,0,1);
 	background-color:skyblue;
-	animation:turn 4s infinite;
+	animation:turn 4s alternate infinite;
 }
 
 .done {
