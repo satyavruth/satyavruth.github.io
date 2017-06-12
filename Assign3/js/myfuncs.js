@@ -5,6 +5,7 @@ var values = new Array('A','B','C','D','E','F','G','H');
 var data = new Array(16);
 var position = new Array(16);
 var i = 0;
+
 function setup_game()
 {
 	var ids = new Array();
@@ -36,10 +37,12 @@ function setup_game()
 			placed.pop();
 			continue;
 		}
-		data[position.indexOf(id_1)] = data[position.indexOf(id_2)] = values[i];
-		//document.getElementById(id_1 + '').className = document.getElementById(id_2 + '').className = 'default_view';
-		document.getElementById(id_1 + '').style.background ="url('/Assign3/images/" + id_1 + ".jpg') no-repeat right top";
-		document.getElementById(id_2 + '').style.background ="url('/Assign3/images/" + id_2 + ".jpg') no-repeat right top";
+		
+		data[position.indexOf(id_1 + '')] = values[i];
+		data[position.indexOf(id_2 + '')] = values[i];
+	
+		$('#' + id_1 + ' #front').css('background-image',"url('/Assign3/images/" + id_1 + ".jpg')");
+		$('#' + id_2 + ' #front').css('background-image',"url('/Assign3/images/" + id_2 + ".jpg')");
 		
 		ids.splice(ids.indexOf(id_1),1);
 		ids.splice(ids.indexOf(id_2),1);
@@ -53,9 +56,8 @@ function show(ele)
 {
 	if(cur == null)
 	{
-		ele.className = 'changed_view';
-		document.getElementById(ele.id + '').style.background = "skyblue";
-		ele.innerHTML = data[position.indexOf(ele.id)];
+		$('#' + ele.id).css('transform','rotateY(180deg)');
+		$('#' + ele.id + '> #back').html(data[position.indexOf(ele.id)] + '');
 		cur = new Array(data[position.indexOf(ele.id)] + '', ele.id + '');
 		turns +=1;
 	}
@@ -63,26 +65,25 @@ function show(ele)
 	{
 		if(cur[1] != ele.id)
 		{
-			document.getElementById(ele.id + '').style.background = "skyblue";
-			ele.className = 'changed_view';
-			ele.innerHTML = data[position.indexOf(ele.id)];
+			document.getElementById(ele.id + '').style = '';
+			$('#' + ele.id).css('transform','rotateY(180deg)');
+			$('#' + ele.id + '> #back').html(data[position.indexOf(ele.id)] + '');
 			if(cur[0] == data[position.indexOf(ele.id)])
 			{
 				clear +=1;
-				
+				setTimeout(function()  {
 				document.getElementById('clear').innerHTML = 'CLEAR: ' + clear;
 				document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
 				document.getElementById(ele.id).className = 'done';
 				document.getElementById(cur[1]).className = 'done';
+				},1300);
 				data.splice(position.indexOf(ele.id),1);
 				position.splice(position.indexOf(ele.id),1);
 				data.splice(position.indexOf(cur[1]),1);
 				position.splice(position.indexOf(cur[1]),1);
 				document.getElementById(ele.id).onclick = '';
 				document.getElementById(cur[1]).onclick = '';				
-				document.getElementById(ele.id + '').style.background = "white";
-				document.getElementById(cur[1] + '').style.background = "white";
-				
+
 				cur = null;
 			}
 		
@@ -95,7 +96,7 @@ function show(ele)
 				}
 				setTimeout(function() {
 				hide(cur[1],ele.id)
-				},1000);
+				},1300);
 			}	
 		}		
 	}
@@ -113,10 +114,12 @@ function show(ele)
 
 function hide(id_1,id_2)
 {
-	document.getElementById(id_1 + '').style.background ="url('/Assign3/images/" + id_1 + ".jpg') no-repeat right top";
-	document.getElementById(id_2 + '').style.background ="url('/Assign3/images/" + id_2 + ".jpg') no-repeat right top";
-	document.getElementById(id_1 + '').innerHTML = document.getElementById(id_2 + '').innerHTML = '';
-	document.getElementById(id_1 + '').className = document.getElementById(id_2 + '').className = 'default_view';
+	$('#' + id_1 + '> #front').css('background-image',"url('/Assign3/images/" + id_1 + ".jpg')");
+	$('#' + id_2 + '> #front').css('background-image',"url('/Assign3/images/" + id_2 + ".jpg')");
+	
+	$('#' + id_1).css('transform','');
+	$('#' + id_2).css('transform','');
+	
 	document.getElementById('clear').innerHTML = 'CLEAR: ' + clear;
 	document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
 	cur = null;
@@ -125,9 +128,9 @@ function hide(id_1,id_2)
 	{
 		document.getElementById(position[i]).onclick = function(){show(this)};
 	}
-}
-
-function override(id_1,id_2) {
 	
-	hide(id_1,id_2);
+	setTimeout(function() {
+	$('#' + id_1 + '> #back').html("");
+	$('#' + id_2 + '> #back').html("");
+	},1500);
 }

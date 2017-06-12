@@ -2,10 +2,10 @@
 	<HEAD>
 		<TITLE> THE GAME, IS ON!! </TITLE>
 		<link rel = 'stylesheet' href = 'css/pageset.css' type = 'text/css'>
-		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		--><script src = 'js/myfuncs.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src = 'js/myfuncs.js'></script>
 	</HEAD>
-	<BODY onload = 'setup_game()'>
+	<BODY onload = 'setup_game()' id = "body">
 		
 		<div class = 'header'>
 			<div class = 'centerfix'>
@@ -33,31 +33,113 @@
 					<TABLE id = 'game'>
 					
 						<TR >
-							<TD id = '00' onclick = 'show(this)'></TD>
-							<TD id = '01' onclick = 'show(this)'></TD>
-							<TD id = '02' onclick = 'show(this)'></TD>
-							<TD id = '03' onclick = 'show(this)'></TD>
+							<TD>
+								<div id = '00' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>		
+							</TD>
+							<TD >
+								<div id = '01' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+
+							</TD>
+							<TD > 
+								<div id = '02' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '03' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
 						</TR>
 						<TR >
-							<TD id = '10' onclick = 'show(this)'></TD>
-							<TD id = '11' onclick = 'show(this)'></TD>
-							<TD id = '12' onclick = 'show(this)'></TD>
-							<TD id = '13' onclick = 'show(this)'></TD>
+							<TD>
+								<div id = '10' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>							
+							</TD>
+							
+							<TD>
+								<div id = '11' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '12' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '13' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>	
+							</TD>
 						</TR>
 						<TR >
-							<TD id = '20' onclick = 'show(this)'></TD>
-							<TD id = '21' onclick = 'show(this)'></TD>
-							<TD id = '22' onclick = 'show(this)'></TD>
-							<TD id = '23' onclick = 'show(this)'></TD>
+							<TD>
+								<div id = '20' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>							
+							</TD>
+							<TD>
+								<div id = '21' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '22' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '23' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
 						</TR>				
 						<TR >
-							<TD id = '30' onclick = 'show(this)'></TD>
-							<TD id = '31' onclick = 'show(this)'></TD>
-							<TD id = '32' onclick = 'show(this)'></TD>
-							<TD id = '33' onclick = 'show(this)'></TD>
+							<TD>
+								<div id = '30' onclick = 'show(this)' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '31' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD >
+								<div id = '32' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '33' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
 						</TR>
 					
-					<TABLE>
+					</TABLE>
 				</div>
 			</div>
 		</div>
