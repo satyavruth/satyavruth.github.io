@@ -72,10 +72,11 @@ function show(ele)
 			{
 				clear +=1;
 				setTimeout(function()  {
-				document.getElementById('clear').innerHTML = 'CLEAR: ' + clear;
-				document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
-				document.getElementById(ele.id).className = 'done';
-				document.getElementById(cur[1]).className = 'done';
+					document.getElementById('clear').innerHTML = 'CLEAR: ' + clear;
+					document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
+					document.getElementById(ele.id).className = 'done';
+					document.getElementById(cur[1]).className = 'done';
+					cur = null;
 				},1300);
 				data.splice(position.indexOf(ele.id),1);
 				position.splice(position.indexOf(ele.id),1);
@@ -83,8 +84,6 @@ function show(ele)
 				position.splice(position.indexOf(cur[1]),1);
 				document.getElementById(ele.id).onclick = '';
 				document.getElementById(cur[1]).onclick = '';				
-
-				cur = null;
 			}
 		
 			else
