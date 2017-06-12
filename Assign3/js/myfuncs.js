@@ -68,6 +68,10 @@ function show(ele)
 			document.getElementById(ele.id + '').style = '';
 			$('#' + ele.id).css('transform','rotateY(180deg)');
 			$('#' + ele.id + '> #back').html(data[position.indexOf(ele.id)] + '');
+			for(i = 0;i < position.length;i++)
+			{
+				$('#' + position[i]).attr("onclick","");
+			}
 			if(cur[0] == data[position.indexOf(ele.id)])
 			{
 				clear +=1;
@@ -76,14 +80,20 @@ function show(ele)
 					document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
 					document.getElementById(ele.id).className = 'done';
 					document.getElementById(cur[1]).className = 'done';
-					cur = null;
+					var temp = new Array(ele.id + '',cur[1] + '');
+				for(i = 0;i < position.length;i++)
+				{
+					if(jQuery.inArray(position[i] + '',temp) < 0)
+						$('#' + position[i]).attr("onclick","show(this)");
+				}
+				cur = null;
+	
 				},1300);
+				
 				data.splice(position.indexOf(ele.id),1);
 				position.splice(position.indexOf(ele.id),1);
 				data.splice(position.indexOf(cur[1]),1);
 				position.splice(position.indexOf(cur[1]),1);
-				document.getElementById(ele.id).onclick = '';
-				document.getElementById(cur[1]).onclick = '';				
 			}
 		
 			else
@@ -125,7 +135,7 @@ function hide(id_1,id_2)
 	
 	for(i = 0;i < position.length;i++)
 	{
-		document.getElementById(position[i]).onclick = function(){show(this)};
+		$('#' + position[i]).attr("onclick","show(this)");
 	}
 	
 	setTimeout(function() {
