@@ -4,26 +4,29 @@
 		<link rel = 'stylesheet' href = 'css/pageset.css' type = 'text/css'>
 		<link rel = 'icon' href = 'favicon.gif'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
 		<script src = 'js/myfuncs.js'></script>
 	</HEAD>
 	<BODY onload = 'setup_game()' id = "body">
 		
-		<div class = 'header'>
-			<div class = 'centerfix'>
+		<div class = 'centerfix'>
+			<div class = 'header'>
 			
-				<h1> PLAY THE GAME.... WIN BY MATCHING </h1>
+			
+				<h1 style = "font-family: 'Carter One';font-size: 22px;"> PLAY THE GAME.... WIN BY MATCHING </h1>
 				
 			</div>
-		</div>
-	
-		<div class = 'content'>
-			<div class = 'centerfix'>
+		<div class = 'content'  style = "background-color: rgba(61, 194, 85, 0.5);">
 				<div class = 'scoreboard'>
 					<div class = 'clear'>
 						<span id = 'clear'>CLEAR: 0</span>
 					</div>
 					<div class = 'score'>
 						<span id = 'score'></span>
+					</div>
+					<div class = 'reset' value = 'reset' onclick = 'setup_game()' id = 'reset'>
+
 					</div>
 					<div class = 'turns'>
 						<span id = 'turns'>TURNS: 0</span>	

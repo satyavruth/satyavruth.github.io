@@ -9,6 +9,15 @@ var i = 0;
 function setup_game()
 {
 	var ids = new Array();
+	turns = 0;
+	clear = 0;
+	data = new Array(16);
+	position = new Array(16);
+	$('#reset').html("<div class = 'icon'><img id = 'icon' height= 40px width = 40px title = 'Give me another frame' /></div>")
+	$('#icon').attr("src","images/hat.png");
+	$('.TheBox').css("background","url('/Assign3/images/bg.png')");
+	document.getElementById('clear').innerHTML = 'CLEAR: ' + clear;
+	document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
 	var i = 0;
 	for(i = 0; i < 16;i++)
 	{
@@ -40,9 +49,19 @@ function setup_game()
 		
 		data[position.indexOf(id_1 + '')] = values[i];
 		data[position.indexOf(id_2 + '')] = values[i];
-	
+		
+		$('#' + id_1 ).attr('class','card');
+		$('#' + id_2 ).attr('class','card');
+		
+		
 		$('#' + id_1 + ' #front').css('background-image',"url('/Assign3/images/" + id_1 + ".jpg')");
 		$('#' + id_2 + ' #front').css('background-image',"url('/Assign3/images/" + id_2 + ".jpg')");
+		
+		$('#' + id_1 + '> #back').html("");
+		$('#' + id_2 + '> #back').html("");
+
+		$('#' + id_1).css('transform','');
+		$('#' + id_2).css('transform','');
 		
 		ids.splice(ids.indexOf(id_1),1);
 		ids.splice(ids.indexOf(id_2),1);
@@ -76,10 +95,14 @@ function show(ele)
 			{
 				clear +=1;
 				setTimeout(function()  {
+					if(clear == 8) clear = 'ALL';
 					document.getElementById('clear').innerHTML = 'CLEAR: ' + clear;
 					document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
 					document.getElementById(ele.id).className = 'done';
 					document.getElementById(cur[1]).className = 'done';
+					$('#' + cur[1] + '> #back').css("color",'rgba(0,0,0,0)');
+					$('#' + ele.id + '> #back').css("color",'rgba(0,0,0,0)');
+					alert('CONGRATULATIONS... Your score is: ' + score);
 					var temp = new Array(ele.id + '',cur[1] + '');
 				for(i = 0;i < position.length;i++)
 				{
@@ -117,7 +140,6 @@ function show(ele)
 		document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
 		var score = Math.floor((clear/turns)*100);
 		document.getElementById('score').innerHTML = score;
-		alert('CONGRATULATIONS... Your score is: ' + score);
 	}
 }
 
