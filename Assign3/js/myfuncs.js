@@ -102,7 +102,6 @@ function show(ele)
 					document.getElementById(cur[1]).className = 'done';
 					$('#' + cur[1] + '> #back').css("color",'rgba(0,0,0,0)');
 					$('#' + ele.id + '> #back').css("color",'rgba(0,0,0,0)');
-					alert('CONGRATULATIONS... Your score is: ' + score);
 					var temp = new Array(ele.id + '',cur[1] + '');
 				for(i = 0;i < position.length;i++)
 				{
@@ -135,11 +134,11 @@ function show(ele)
 	
 	if(clear == 8)
 	{
-		
 		document.getElementById('clear').innerHTML = 'CLEAR: ALL';
 		document.getElementById('turns').innerHTML = 'TURNS: ' + turns;
 		var score = Math.floor((clear/turns)*100);
 		document.getElementById('score').innerHTML = score;
+		alert('CONGRATULATIONS... Your score is: ' + score);
 	}
 }
 
