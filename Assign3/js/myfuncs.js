@@ -9,6 +9,7 @@ var i = 0;
 function setup_game()
 {
 	var ids = new Array();
+	$('#score').html('');
 	turns = 0;
 	clear = 0;
 	data = new Array(16);
@@ -129,7 +130,16 @@ function show(ele)
 				hide(cur[1],ele.id)
 				},1300);
 			}	
-		}		
+		}
+		else {
+				for(i = 0;i < position.length;i++)
+				{
+					document.getElementById(position[i]).onclick = function(){	};
+				}
+				setTimeout(function() {
+				hide(cur[1],ele.id)
+				},100);
+		}
 	}
 	
 	if(clear == 8)
