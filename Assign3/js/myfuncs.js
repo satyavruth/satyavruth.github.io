@@ -14,7 +14,7 @@ function setup_game()
 	clear = 0;
 	data = new Array(16);
 	position = new Array(16);
-	$('#reset').html("<div class = 'icon'><img id = 'icon' height= 40px width = 40px title = 'Give me another frame' /></div>")
+	$('#reset').html("<div class = 'icon'><img id = 'icon' height= 40px width = 40px title = 'Give me another frame' /></div>");
 	$('#icon').attr("src","images/hat.png");
 	$('.TheBox').css("background","url('/Assign3/images/bg.png')");
 	document.getElementById('clear').innerHTML = 'CLEAR: ' + clear;
